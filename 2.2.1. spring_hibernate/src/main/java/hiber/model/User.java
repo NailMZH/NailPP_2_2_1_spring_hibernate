@@ -6,7 +6,9 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-   @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+//   @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+   @OneToOne(mappedBy = "user")
+   @MapsId
    private Car car;
 
    @Id
